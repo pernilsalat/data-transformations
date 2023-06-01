@@ -1,0 +1,2529 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <title>@hamlab/data-transformations 1.0.5 | Documentation</title>
+  <meta name='description' content='A practical functional library for data transformations in JavaScript.'>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' rel='stylesheet'>
+  <link href='assets/style.css' rel='stylesheet'>
+  <link href='assets/github.css' rel='stylesheet'>
+  <link href='assets/split.css' rel='stylesheet'>
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>@hamlab/data-transformations</h3>
+          <div class='mb1'><code>1.0.5</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            spellcheck='false'
+            autocapitalize='off'
+            autocorrect='off'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#bind'
+                  class="">
+                  bind
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#complement'
+                  class="">
+                  complement
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#compose'
+                  class="">
+                  compose
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#composeasync'
+                  class="">
+                  composeAsync
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#curry'
+                  class="">
+                  curry
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#curryn'
+                  class="">
+                  curryN
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#filter'
+                  class="">
+                  filter
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#transducer'
+                  class="">
+                  Transducer
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#collection'
+                  class="">
+                  Collection
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#into'
+                  class="">
+                  Into
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#into-1'
+                  class="">
+                  into
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#is'
+                  class="">
+                  is
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#map'
+                  class="">
+                  map
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#pipe'
+                  class="">
+                  pipe
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#pipeasync'
+                  class="">
+                  pipeAsync
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#reduce'
+                  class="">
+                  reduce
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#reduced'
+                  class="">
+                  reduced
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#take'
+                  class="">
+                  take
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#tap'
+                  class="">
+                  tap
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#transduce'
+                  class="">
+                  transduce
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='https://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='bind'>
+      bind
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/bind.js#L20-L26'>
+      <span>src/bind.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates a function that is bound to a context.
+Note: <code>bind</code> does not provide the additional argument-binding capabilities of
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind</a>.</p>
+
+    <div class='pre p1 fill-light mt0'>bind(fn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, thisObj: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    The function to bind to context
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>thisObj</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    The context to bind 
+<code>fn</code>
+ to
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        A function that will execute in the context of 
+<code>thisObj</code>
+.
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> log = <span class="hljs-title function_">bind</span>(<span class="hljs-variable language_">console</span>.<span class="hljs-property">log</span>, <span class="hljs-variable language_">console</span>);
+<span class="hljs-title function_">pipe</span>(inc, log, double)(<span class="hljs-number">2</span>); <span class="hljs-comment">//=&gt; 6</span>
+<span class="hljs-comment">// logs: 3</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='complement'>
+      complement
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/complement.js#L24-L26'>
+      <span>src/complement.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Takes a function <code>f</code> and returns a function <code>g</code> such that:</p>
+<ul>
+<li>
+<p>applying <code>g</code> to zero or more arguments will give <strong>true</strong> if applying
+the same arguments to <code>f</code> gives a logical <strong>false</strong> value; and</p>
+</li>
+<li>
+<p>applying <code>g</code> to zero or more arguments will give <strong>false</strong> if applying
+the same arguments to <code>f</code> gives a logical <strong>true</strong> value.</p>
+</li>
+</ul>
+
+    <div class='pre p1 fill-light mt0'>complement(fn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> <span class="hljs-title function_">isEven</span> = (<span class="hljs-params">n</span>) =&gt; n % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+<span class="hljs-keyword">const</span> isOdd = <span class="hljs-title function_">complement</span>(isEven);
+
+<span class="hljs-title function_">isOdd</span>(<span class="hljs-number">21</span>); <span class="hljs-comment">//=&gt; true</span>
+<span class="hljs-title function_">isOdd</span>(<span class="hljs-number">42</span>); <span class="hljs-comment">//=&gt; false</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='compose'>
+      compose
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/compose.js#L18-L26'>
+      <span>src/compose.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Performs right-to-left function composition. The rightmost function may have
+any arity; the remaining functions must be unary.</p>
+
+    <div class='pre p1 fill-light mt0'>compose(functions: ...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>functions</span> <code class='quiet'>(...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        a function that represents the composition of the arguments
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        pipe
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> <span class="hljs-title function_">inc</span> = x =&gt; x + <span class="hljs-number">1</span>:
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">negate</span> = x =&gt; -x;
+
+<span class="hljs-keyword">var</span> f = <span class="hljs-title function_">compose</span>(inc, negate, <span class="hljs-title class_">Math</span>.<span class="hljs-property">pow</span>);
+<span class="hljs-title function_">f</span>(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">// -(3^4) + 1</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='composeasync'>
+      composeAsync
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/composeAsync.js#L25-L43'>
+      <span>src/composeAsync.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Performs right-to-left function composition. The rightmost function may have
+any arity; the remaining functions must be unary. If any function returns a
+promise, it chains remaining ones</p>
+
+    <div class='pre p1 fill-light mt0'>composeAsync(functions: ...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>functions</span> <code class='quiet'>(...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        a function that represents the composition of the arguments
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        pipeAsync
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> <span class="hljs-title function_">head</span> = (<span class="hljs-params">[h]</span>) =&gt; h;
+<span class="hljs-keyword">var</span> <span class="hljs-title function_">process</span> = (<span class="hljs-params">a</span>) =&gt; <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">resolve</span>(a);
+<span class="hljs-keyword">var</span> promiseAll = <span class="hljs-title class_">Promise</span>.<span class="hljs-property">all</span>.<span class="hljs-title function_">bind</span>(<span class="hljs-title class_">Promise</span>);
+
+<span class="hljs-keyword">var</span> f = <span class="hljs-title function_">composeAsync</span>(head, promiseAll, process);
+
+<span class="hljs-keyword">await</span> <span class="hljs-title function_">f</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]); <span class="hljs-comment">// Promise.all([process(1), process(2)])[0] =&gt; 1</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='curry'>
+      curry
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/curry.js#L27-L35'>
+      <span>src/curry.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Returns a curried equivalent of the provided function. The curried
+function has two unusual capabilities. First, its arguments needn't
+be provided one at a time. If <code>f</code> is a ternary function and <code>g</code> is
+<code>curry(f)</code>, the following are equivalent:</p>
+<ul>
+<li><code>g(1)(2)(3)</code></li>
+<li><code>g(1)(2, 3)</code></li>
+<li><code>g(1, 2)(3)</code></li>
+<li><code>g(1, 2, 3)</code></li>
+</ul>
+
+    <div class='pre p1 fill-light mt0'>curry(fn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, initialArgs: ...any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    The function to curry.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>initialArgs</span> <code class='quiet'>(...any)</code>
+	    The fn initial arguments.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        A new, curried function.
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        curryN
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> addFourNumbers = <span class="hljs-keyword">function</span>(<span class="hljs-params">a, b, c, d</span>) {
+  <span class="hljs-keyword">return</span> a + b + c + d;
+};
+<span class="hljs-keyword">var</span> curriedAddFourNumbers = <span class="hljs-title function_">curry</span>(addFourNumbers);
+<span class="hljs-keyword">var</span> f = <span class="hljs-title function_">curriedAddFourNumbers</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+<span class="hljs-keyword">var</span> g = <span class="hljs-title function_">f</span>(<span class="hljs-number">3</span>);
+<span class="hljs-title function_">g</span>(<span class="hljs-number">4</span>); <span class="hljs-comment">//=&gt; 10</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='curryn'>
+      curryN
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/curryN.js#L31-L39'>
+      <span>src/curryN.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Returns a curried equivalent of the provided function, with the
+specified arity. The curried function has two unusual capabilities.
+First, its arguments needn't be provided one at a time. If <code>g</code> is
+<code>curryN(3, f)</code>, the following are equivalent:</p>
+<ul>
+<li><code>g(1)(2)(3)</code></li>
+<li><code>g(1)(2, 3)</code></li>
+<li><code>g(1, 2)(3)</code></li>
+<li><code>g(1, 2, 3)</code></li>
+</ul>
+
+    <div class='pre p1 fill-light mt0'>curryN(arity: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, fn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, initialArgs: ...any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arity</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    The arity for the returned function.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    The function to curry.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>initialArgs</span> <code class='quiet'>(...any)</code>
+	    The function initial arguments.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        A new, curried function.
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        curry
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> addFourNumbers = <span class="hljs-keyword">function</span>(<span class="hljs-params">a, b, c, d = <span class="hljs-number">0</span></span>) {
+  <span class="hljs-keyword">return</span> a + b + c + d;
+};
+
+<span class="hljs-keyword">var</span> curriedAddFourNumbers = <span class="hljs-title function_">curryN</span>(<span class="hljs-number">3</span>, addFourNumbers);
+<span class="hljs-keyword">var</span> f = <span class="hljs-title function_">curriedAddFourNumbers</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+<span class="hljs-title function_">f</span>(<span class="hljs-number">3</span>); <span class="hljs-comment">//=&gt; 6</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='filter'>
+      filter
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/filter.js#L36-L52'>
+      <span>src/filter.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Returns a new list containing only those items that match a given predicate function.
+The predicate function is passed: <strong>(value, index, collection)</strong>.
+in the case of filtering and object, the predicate function is passed: <strong>(value, key, collection)</strong>.</p>
+<p>Note that <code>filter</code> does not skip deleted or unassigned indices, unlike the native
+<code>Array.prototype.filter</code> method. For more details on this behavior, see:
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter#Description">Array.prototype.filter</a></p>
+<p>Acts as a transducer if a transformer is given as second parameter.</p>
+
+    <div class='pre p1 fill-light mt0'>filter(fn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, collection: <a href="#collection">Collection</a>?): (<a href="#collection">Collection</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    The function called per iteration.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>collection</span> <code class='quiet'>(<a href="#collection">Collection</a>?)</code>
+	    The collection to iterate over.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(<a href="#collection">Collection</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>:
+        The new filtered array.
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        transduce
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> <span class="hljs-title function_">isEven</span> = (<span class="hljs-params">n</span>) =&gt; n % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">isValueEven</span> = (<span class="hljs-params">[k, v]</span>) =&gt; <span class="hljs-title function_">isEven</span>(v)
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">isVowel</span> = (<span class="hljs-params">c</span>) =&gt; <span class="hljs-regexp">/[aeiou]/</span>.<span class="hljs-title function_">test</span>(c);
+
+<span class="hljs-title function_">filter</span>(isVowel, <span class="hljs-string">&#x27;string&#x27;</span>); <span class="hljs-comment">//=&gt; &#x27;i&#x27;</span>
+<span class="hljs-title function_">filter</span>(isEven, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; [2]</span>
+<span class="hljs-title function_">filter</span>(isEven, <span class="hljs-title class_">Set</span>[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; Set[2]</span>
+<span class="hljs-title function_">filter</span>(isEven, <span class="hljs-keyword">function</span>* () { <span class="hljs-keyword">yield</span>* [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]}); <span class="hljs-comment">//=&gt; [2]</span>
+<span class="hljs-title function_">filter</span>(isEven, { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> }); <span class="hljs-comment">//=&gt; { b: 2 }</span>
+<span class="hljs-title function_">filter</span>(isValueEven, <span class="hljs-title class_">Map</span>{ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> }); <span class="hljs-comment">//=&gt; Map{ b: 2 }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='transducer'>
+      Transducer
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/internal/typedef.js#L1-L10'>
+      <span>src/internal/typedef.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>see <a href="https://github.com/cognitect-labs/transducers-js/tree/master#the-transducer-protocol">The Transducer Protocol</a></p>
+
+    <div class='pre p1 fill-light mt0'>Transducer</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>null</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+          : <code>@@transducer/init</code>
+    - Function: () => any, Hook called at the beginning to compute the initial state
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>null</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+          : <code>@@transducer/result</code>
+  - Function: (state) => any, Hook called when the result is computed
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>null</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+          : <code>@@transducer/step</code>
+    - Function: (state, value, index, collection) => any, Hook called at every iteration
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='collection'>
+      Collection
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/internal/typedef.js#L12-L16'>
+      <span>src/internal/typedef.js</span>
+      </a>
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>Collection</div>
+  
+    <p>
+      Type:
+      (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> | <a href="#transducer">Transducer</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | Iterator | GeneratorFunction | Generator | Iterable)
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='into'>
+      Into
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/into.js#L4-L13'>
+      <span>src/into.js</span>
+      </a>
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>Into</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>array</span> <code class='quiet'>(function (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, <a href="#collection">Collection</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>?)</code>
+          : Function: (value, index, collection, accumulator) => any, Merge strategy: Array.push
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>string</span> <code class='quiet'>(function (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, <a href="#collection">Collection</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?)</code>
+          : Function: (value, index, collection, accumulator) => any, Merge strategy: concatenation
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>number</span> <code class='quiet'>(function (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, <a href="#collection">Collection</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?)</code>
+          : Function: (value, index, collection, accumulator) => any, Merge strategy: last returned value becomes the accumulator
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>set</span> <code class='quiet'>(function (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, <a href="#collection">Collection</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a>?)</code>
+          : Function: (value, index, collection, accumulator) => any, Merge strategy: Set.add
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>map</span> <code class='quiet'>(function (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, <a href="#collection">Collection</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a>?)</code>
+          : Function: ([key, value], index, collection, accumulator) => [any, any], Merge strategy: Map.add
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>object</span> <code class='quiet'>(function (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, <a href="#collection">Collection</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?)</code>
+          : Function: ([key, value], index, collection, accumulator) => [any, any], Merge strategy: object assignation
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='into-1'>
+      into
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/into.js#L52-L89'>
+      <span>src/into.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Transforms the items of the iterable with the transducer and appends the transformed items to
+the accumulator using an appropriate iterator function based on the accumulator type.</p>
+<p>The transducer function takes 4 params: (value, index, collection, accumulator). Then value
+parameter is a pair [key, value] when the accumulator is an Object or a Map.</p>
+<p>In the case the accumulator is a number (into.number), there is no merge strategy and just
+returns what the transducer returns</p>
+<p>The iteration is performed with reduce after initializing the transducer.</p>
+
+    <div class='pre p1 fill-light mt0'>into</div>
+  
+    <p>
+      Type:
+      <a href="#into">Into</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> value = ([k, v]] =&gt; v
+<span class="hljs-keyword">var</span> <span class="hljs-title function_">isEven</span> = (<span class="hljs-params">x</span>) =&gt; x % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>
+<span class="hljs-keyword">var</span> <span class="hljs-title function_">isVowel</span> = (<span class="hljs-params">x</span>) =&gt; <span class="hljs-regexp">/aeiou/</span>.<span class="hljs-title function_">test</span>(x)
+<span class="hljs-keyword">var</span> <span class="hljs-title function_">isObject</span> = (<span class="hljs-params">x</span>) =&gt; <span class="hljs-keyword">typeof</span> x === <span class="hljs-string">&#x27;object&#x27;</span>
+<span class="hljs-keyword">var</span> <span class="hljs-title function_">toUppercase</span> = (<span class="hljs-params">x</span>) =&gt; x.<span class="hljs-title function_">toUppercase</span>()
+<span class="hljs-keyword">var</span> <span class="hljs-title function_">addAccumulator</span> = (<span class="hljs-params">value, index, collection, accumulator</span>) =&gt; value + accumulator
+<span class="hljs-keyword">var</span> <span class="hljs-title function_">pairById</span> = (<span class="hljs-params">x</span>) =&gt; [x.<span class="hljs-property">id</span>, x]
+
+into.<span class="hljs-title function_">array</span>(<span class="hljs-title function_">compose</span>(<span class="hljs-title function_">map</span>(value), <span class="hljs-title function_">filter</span>(isEven)), {<span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span>}) <span class="hljs-comment">// [2]</span>
+
+into.<span class="hljs-title function_">string</span>(<span class="hljs-title function_">compose</span>(<span class="hljs-title function_">filter</span>(isVowel), <span class="hljs-title function_">map</span>(toUppercase)), <span class="hljs-string">&#x27;string&#x27;</span>) <span class="hljs-comment">// &#x27;I&#x27;</span>
+
+into.<span class="hljs-title function_">number</span>(<span class="hljs-title function_">map</span>(addAccumulator), [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) <span class="hljs-comment">// 1 + 2 + 3 = 6</span>
+
+into.<span class="hljs-title function_">object</span>(
+  <span class="hljs-title function_">compose</span>(<span class="hljs-title function_">filter</span>(isObject), <span class="hljs-title function_">map</span>(pairById)),
+    [<span class="hljs-number">1</span>, { <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;1-2-3&#x27;</span>, <span class="hljs-attr">value</span>: <span class="hljs-number">10</span> }]
+  ) <span class="hljs-comment">// { &#x27;1-2-3&#x27;: { id: &#x27;1-2-3&#x27;, value: 10 } }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='is'>
+      is
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/is.js#L139-L174'>
+      <span>src/is.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>See if an object (<code>val</code>) is an instance of the supplied constructor.
+This function will check up the inheritance chain, if any.</p>
+<ul>
+<li>Additionally, it has the following methods for nicer and more semantic
+type checking:
+array -
+function -
+functor -
+filterable -
+generator -
+iterator -
+map -
+object (strict checking) -
+promise -
+set -
+string -
+thenable -
+transducer -
+type -
+strict -
+nil -
+not (negates any of the previous ones)</li>
+<li>@func</li>
+</ul>
+
+    <div class='pre p1 fill-light mt0'>is</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ctor</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    A constructor
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>val</span> <code class='quiet'>(any)</code>
+	    The value to test
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>array</span> <code class='quiet'>(function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if is an Array
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>function</span> <code class='quiet'>(function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if is type function
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>functor</span> <code class='quiet'>(function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if it has a map method
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>filterable</span> <code class='quiet'>(function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if it has a filter method
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>generator</span> <code class='quiet'>(function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if it is a generator function
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>iterator</span> <code class='quiet'>(function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if it has [Symbol.iterator] method
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>map</span> <code class='quiet'>(function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if it is a Map or an instance of a Map
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>object</span> <code class='quiet'>(function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if the constructor equals to Object (if it is strictly an object)
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>promise</span> <code class='quiet'>(function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if it is a Promise or an instance of a Promise
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>set</span> <code class='quiet'>(function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if it is a Set or an instance of a Set
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>string</span> <code class='quiet'>(function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if it is boolean type
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>thenable</span> <code class='quiet'>(function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if it has a then method
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>transducer</span> <code class='quiet'>(function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if it is an object that follows the transducer protocol
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>type</span> <code class='quiet'>(function (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if the type matches
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>strict</span> <code class='quiet'>(function (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if the constructor function matches
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>nil</span> <code class='quiet'>(function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+          : Checks if it is null or undefined
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>not</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?)</code>
+          : negates the following method
+
+          
+            <ul>
+              
+                <li><code>not.array</code> function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if is not an Array</p>
+</li>
+              
+                <li><code>not.function</code> function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if is not type function</p>
+</li>
+              
+                <li><code>not.functor</code> function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if it has not a map method</p>
+</li>
+              
+                <li><code>not.filterable</code> function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if it has not a filter method</p>
+</li>
+              
+                <li><code>not.generator</code> function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if it is not a generator function</p>
+</li>
+              
+                <li><code>not.iterator</code> function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if it has not [Symbol.iterator] method</p>
+</li>
+              
+                <li><code>not.map</code> function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if it is not a Map nor an instance of a Map</p>
+</li>
+              
+                <li><code>not.object</code> function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if the constructor not equals to Object (if it is strictly not an object)</p>
+</li>
+              
+                <li><code>not.promise</code> function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if it is not a Promise nor an instance of a Promise</p>
+</li>
+              
+                <li><code>not.set</code> function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if it is not a Set nor an instance of a Set</p>
+</li>
+              
+                <li><code>not.string</code> function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if it is not boolean type</p>
+</li>
+              
+                <li><code>not.thenable</code> function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if it has not a then method</p>
+</li>
+              
+                <li><code>not.transducer</code> function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if it is not an object that follows the transducer protocol</p>
+</li>
+              
+                <li><code>not.type</code> function (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if the type do not matches matches</p>
+</li>
+              
+                <li><code>not.strict</code> function (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if the constructor function do not matches</p>
+</li>
+              
+                <li><code>not.nil</code> function (any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?
+                  
+                  <p>Checks if it is not null or undefined</p>
+</li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>is.<span class="hljs-title function_">object</span>([]); =&gt; <span class="hljs-literal">false</span>
+<span class="hljs-title function_">is</span>(<span class="hljs-title class_">Object</span>, []); <span class="hljs-comment">//=&gt; true</span>
+<span class="hljs-title function_">is</span>(<span class="hljs-title class_">Object</span>, {}); <span class="hljs-comment">//=&gt; true</span>
+<span class="hljs-title function_">is</span>(<span class="hljs-title class_">Number</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; true</span>
+<span class="hljs-title function_">is</span>(<span class="hljs-title class_">Object</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//=&gt; false</span>
+<span class="hljs-title function_">is</span>(<span class="hljs-title class_">String</span>, <span class="hljs-string">&#x27;s&#x27;</span>); <span class="hljs-comment">//=&gt; true</span>
+<span class="hljs-title function_">is</span>(<span class="hljs-title class_">String</span>, <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(<span class="hljs-string">&#x27;&#x27;</span>)); <span class="hljs-comment">//=&gt; true</span>
+<span class="hljs-title function_">is</span>(<span class="hljs-title class_">Object</span>, <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(<span class="hljs-string">&#x27;&#x27;</span>)); <span class="hljs-comment">//=&gt; true</span>
+<span class="hljs-title function_">is</span>(<span class="hljs-title class_">Object</span>, <span class="hljs-string">&#x27;s&#x27;</span>); <span class="hljs-comment">//=&gt; false</span>
+<span class="hljs-title function_">is</span>(<span class="hljs-title class_">Number</span>, {}); <span class="hljs-comment">//=&gt; false</span>
+is.<span class="hljs-keyword">function</span>(<span class="hljs-params">() =&gt; {}</span>); =&gt; <span class="hljs-literal">true</span>
+is.<span class="hljs-property">not</span>.<span class="hljs-keyword">function</span>(<span class="hljs-params">() =&gt; {}</span>); =&gt; <span class="hljs-literal">false</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='map'>
+      map
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/map.js#L39-L55'>
+      <span>src/map.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Returns a new Iterable, constructed by applying the supplied function to every element of the
+supplied list.</p>
+<p>When mapping an object, the function mapper accepts <strong>(value, key, object)</strong>
+In any other case, the mapper function accepts <strong>(value, index, collection)</strong>. The value comes from
+the iterator of the collection.</p>
+<p>Note: <code>map</code> does not skip deleted or unassigned indices (sparse arrays), unlike the
+native <code>Array.prototype.map</code> method. For more details on this behavior, see:
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#Description">Array.prototype.map</a></p>
+<p>Acts as a transducer if a transformer is given as second parameter.</p>
+
+    <div class='pre p1 fill-light mt0'>map(fn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, collection: <a href="#collection">Collection</a>?): (<a href="#collection">Collection</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    The function to be called on every element of the input 
+<code>Iterable</code>
+.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>collection</span> <code class='quiet'>(<a href="#collection">Collection</a>?)</code>
+	    The Iterable to be iterated over.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(<a href="#collection">Collection</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>:
+        The new Iterable or curried function.
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        transduce
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> <span class="hljs-title function_">toUpperCase</span> = (<span class="hljs-params">x</span>) =&gt; x.<span class="hljs-title function_">toUpperCase</span>();
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">double</span> = (<span class="hljs-params">x</span>) =&gt; x * <span class="hljs-number">2</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">doubleValue</span> = (<span class="hljs-params">[k, v]</span>) =&gt; [k, v * <span class="hljs-number">2</span>];
+
+<span class="hljs-title function_">map</span>(toUpperCase, <span class="hljs-string">&#x27;aeiou&#x27;</span>); <span class="hljs-comment">//=&gt; &#x27;AEIOU&#x27;</span>
+<span class="hljs-title function_">map</span>(double, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; [2, 4, 6]</span>
+<span class="hljs-title function_">map</span>(double, <span class="hljs-title class_">Set</span>[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; Set[2, 4, 6]</span>
+<span class="hljs-title function_">map</span>(double, <span class="hljs-keyword">function</span>* () { <span class="hljs-keyword">yield</span>* [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]}); <span class="hljs-comment">//=&gt; [2, 4, 6]</span>
+<span class="hljs-title function_">map</span>(double, { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> }); <span class="hljs-comment">//=&gt; { a: 2, b: 4 }</span>
+<span class="hljs-title function_">map</span>(doubleValue, <span class="hljs-title class_">Map</span>{ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> }); <span class="hljs-comment">//=&gt; Map{ a: 2, b: 4 }</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='pipe'>
+      pipe
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/pipe.js#L20-L28'>
+      <span>src/pipe.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Performs left-to-right function composition. The leftmost function may have
+any arity; the remaining functions must be unary.</p>
+<p>In some libraries this function is named <code>sequence</code>.</p>
+
+    <div class='pre p1 fill-light mt0'>pipe(functions: ...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>functions</span> <code class='quiet'>(...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        a function that represents the composition of the arguments
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        compose
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> f = <span class="hljs-title function_">pipe</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-property">pow</span>, toString);
+
+<span class="hljs-title function_">f</span>(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">// (3^4).toString()</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='pipeasync'>
+      pipeAsync
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/pipeAsync.js#L25-L43'>
+      <span>src/pipeAsync.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Performs left-to-right function composition. The leftmost function may have
+any arity; the remaining functions must be unary. If any function returns a
+promise, it chains remaining ones</p>
+
+    <div class='pre p1 fill-light mt0'>pipeAsync(functions: ...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>functions</span> <code class='quiet'>(...<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        a function that represents the composition of the arguments
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        composeAsync
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> <span class="hljs-title function_">head</span> = (<span class="hljs-params">[h]</span>) =&gt; h;
+<span class="hljs-keyword">var</span> <span class="hljs-title function_">process</span> = (<span class="hljs-params">a</span>) =&gt; <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">resolve</span>(a);
+<span class="hljs-keyword">var</span> promiseAll = <span class="hljs-title class_">Promise</span>.<span class="hljs-property">all</span>.<span class="hljs-title function_">bind</span>(<span class="hljs-title class_">Promise</span>);
+
+<span class="hljs-keyword">var</span> f = <span class="hljs-title function_">pipeAsync</span>(process, promiseAll, head);
+
+<span class="hljs-title function_">f</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]); <span class="hljs-comment">// Promise.all([process(1), process(2)])[0] =&gt; 1</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='reduce'>
+      reduce
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/reduce.js#L42-L54'>
+      <span>src/reduce.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Returns a single item by iterating through the collection, successively calling the iterator
+function and passing it an accumulator value and the current value from the array, and
+then passing the result to the next call.</p>
+<p>The iterator function receives: <strong>(acc, value, index, collection)</strong>. while reducing an object
+it receives: <strong>(acc, [value, key], collection)</strong>.
+It may use <code>reduced</code> to stop the iteration.</p>
+<p>It also accepts a transducer instead of an iterator function.</p>
+<p>Note: <code>reduce</code> does not skip deleted or unassigned indices (sparse arrays), unlike
+the native <code>Array.prototype.reduce</code> method. For more details on this behavior, see:
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#Description">Array.prototype.reduce</a></p>
+
+    <div class='pre p1 fill-light mt0'>reduce(transducer: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, initial: any, collection: <a href="#collection">Collection</a>): any</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>transducer</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    The iterator function. Receives four values: the accumulator, the
+current element from the Iterable, the iteration index and the whole Iterable. It also accepts a Transducer
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>initial</span> <code class='quiet'>(any)</code>
+	    The accumulator initial value.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>collection</span> <code class='quiet'>(<a href="#collection">Collection</a>)</code>
+	    An Iterable parameter.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        The final, accumulated value.
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        reduced
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> <span class="hljs-title function_">add</span> = (<span class="hljs-params">acc, act</span>) =&gt; a + b;
+
+<span class="hljs-title function_">reduce</span>(add, <span class="hljs-string">&#x27;normal&#x27;</span>, <span class="hljs-string">&#x27;string&#x27;</span>); <span class="hljs-comment">//=&gt; &#x27;normal string&#x27;</span>
+<span class="hljs-title function_">reduce</span>(add, <span class="hljs-number">10</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; 16</span>
+<span class="hljs-title function_">reduce</span>(add, <span class="hljs-number">10</span>, <span class="hljs-title class_">Set</span>[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//=&gt; 16</span>
+<span class="hljs-title function_">reduce</span>(add, <span class="hljs-number">10</span>, <span class="hljs-keyword">function</span>* () { <span class="hljs-keyword">yield</span>* [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]}); <span class="hljs-comment">//=&gt; 16</span>
+<span class="hljs-title function_">reduce</span>(add, <span class="hljs-string">&#x27;&#x27;</span>, { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> }); <span class="hljs-comment">//=&gt; &#x27;a,1b,2&#x27;</span>
+<span class="hljs-title function_">reduce</span>(add, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-title class_">Map</span>{ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> }); <span class="hljs-comment">//=&gt; &#x27;a,1b,2&#x27;</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='reduced'>
+      reduced
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/reduced.js#L22-L25'>
+      <span>src/reduced.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Returns a value wrapped to indicate that it is the final value of the
+reduce and transduce functions.  The returned value
+should be considered a black box: the internal structure is not
+guaranteed to be stable.</p>
+
+    <div class='pre p1 fill-light mt0'>reduced(state: any): any</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>state</span> <code class='quiet'>(any)</code>
+	    The final value of the reduce.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        The wrapped value.
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        reduce, transduce
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-title function_">reduce</span>(
+  <span class="hljs-title function_">pipe</span>(add, <span class="hljs-title function_">ifElse</span>(<span class="hljs-title function_">lte</span>(<span class="hljs-number">10</span>), reduced, identity)),
+  <span class="hljs-number">0</span>,
+  [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+) <span class="hljs-comment">// 10</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='take'>
+      take
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/take.js#L41-L58'>
+      <span>src/take.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Returns the first <code>n</code> elements of the iterable.</p>
+
+    <div class='pre p1 fill-light mt0'>take(n: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, collection: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | Iterator | GeneratorFunction | Generator)): any</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>n</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>collection</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | Iterator | GeneratorFunction | Generator))</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> names = names
+
+<span class="hljs-title function_">take</span>(<span class="hljs-number">1</span>, names); <span class="hljs-comment">//=&gt; [&#x27;foo&#x27;]</span>
+<span class="hljs-title function_">take</span>(<span class="hljs-number">1</span>, <span class="hljs-keyword">function</span>* () { <span class="hljs-keyword">yield</span>* names }); <span class="hljs-comment">//=&gt; [&#x27;foo&#x27;]</span>
+<span class="hljs-title function_">take</span>(<span class="hljs-number">1</span>, names); <span class="hljs-comment">//=&gt; [&#x27;foo&#x27;]</span>
+<span class="hljs-title function_">take</span>(<span class="hljs-number">2</span>, names); <span class="hljs-comment">//=&gt; [&#x27;foo&#x27;, &#x27;bar&#x27;]</span>
+<span class="hljs-title function_">take</span>(<span class="hljs-number">3</span>, names); <span class="hljs-comment">//=&gt; [&#x27;foo&#x27;, &#x27;bar&#x27;, &#x27;baz&#x27;]</span>
+<span class="hljs-title function_">take</span>(<span class="hljs-number">4</span>, names); <span class="hljs-comment">//=&gt; [&#x27;foo&#x27;, &#x27;bar&#x27;, &#x27;baz&#x27;]</span>
+<span class="hljs-title function_">take</span>(<span class="hljs-number">3</span>, <span class="hljs-string">&#x27;ramda&#x27;</span>); <span class="hljs-comment">//=&gt; &#x27;ram&#x27;</span>
+<span class="hljs-title function_">take</span>(<span class="hljs-number">1</span>, <span class="hljs-title class_">Map</span>{ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> }) =&gt; [[<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-number">1</span>]]
+
+<span class="hljs-keyword">const</span> personnel = [
+ <span class="hljs-string">&#x27;Dave Brubeck&#x27;</span>,
+ <span class="hljs-string">&#x27;Paul Desmond&#x27;</span>,
+ <span class="hljs-string">&#x27;Eugene Wright&#x27;</span>,
+ <span class="hljs-string">&#x27;Joe Morello&#x27;</span>,
+ <span class="hljs-string">&#x27;Gerry Mulligan&#x27;</span>,
+ <span class="hljs-string">&#x27;Bob Bates&#x27;</span>,
+ <span class="hljs-string">&#x27;Joe Dodge&#x27;</span>,
+ <span class="hljs-string">&#x27;Ron Crotty&#x27;</span>
+];
+
+<span class="hljs-keyword">const</span> takeTwo = <span class="hljs-title function_">take</span>(<span class="hljs-number">2</span>);
+<span class="hljs-title function_">takeFive</span>(personnel); <span class="hljs-comment">//=&gt; [&#x27;Dave Brubeck&#x27;, &#x27;Paul Desmond&#x27;]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='tap'>
+      tap
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/tap.js#L22-L32'>
+      <span>src/tap.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Runs the given function with the supplied object, then returns the object.</p>
+<p>Acts as a transducer if a transformer is given as second parameter.</p>
+
+    <div class='pre p1 fill-light mt0'>tap(fn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, x: any): any</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    The function to call with 
+<code>x</code>
+. The return value of 
+<code>fn</code>
+ will be thrown away.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>x</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        <code>x</code>
+.
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> <span class="hljs-title function_">sayX</span> = x =&gt; <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;x is &#x27;</span> + x);
+R.<span class="hljs-title function_">tap</span>(sayX, <span class="hljs-number">100</span>); <span class="hljs-comment">//=&gt; 100</span>
+<span class="hljs-comment">// logs &#x27;x is 100&#x27;</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='transduce'>
+      transduce
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/utilities/blob/ac2e51822358feea23f6aa8149c151c25731f4c8/src/transduce.js#L49-L66'>
+      <span>src/transduce.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Initializes a transducer using supplied iterator function. Returns a single item by
+iterating through the list, successively calling the transformed iterator function and
+passing it an accumulator value and the current value from the array, and then passing
+the result to the next call.</p>
+<p>The iterator function receives two values: <em>(acc, value)</em>. It will be wrapped as a
+transformer to initialize the transducer. A transformer can be passed directly in place
+of an iterator function.  In both cases, iteration may be stopped early with the
+<code>reduced</code> function.</p>
+<p>A transducer is a function that accepts a transformer and returns a transformer and can
+be composed directly.</p>
+<p>A transformer is an object that provides a 2-arity reducing iterator function, step,
+0-arity initial value function, init, and 1-arity result extraction function, result.
+The step function is used as the iterator function in reduce. The result function is used
+to convert the final accumulator into the return type and in most cases is R.identity.
+The init function can be used to provide an initial accumulator, but is ignored by transduce.</p>
+<p>The iteration is performed with reduce after initializing the transducer.</p>
+
+    <div class='pre p1 fill-light mt0'>transduce(transducer: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, combine: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, initial: any, collection: <a href="#collection">Collection</a>): any</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>transducer</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    The transducer function. Receives a transformer and returns a transformer.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>combine</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    The iterator function. Receives two values, the accumulator and the
+current element from the array. Wrapped as transformer, if necessary, and used to
+initialize the transducer
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>initial</span> <code class='quiet'>(any)</code>
+	    The initial accumulator value.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>collection</span> <code class='quiet'>(<a href="#collection">Collection</a>)</code>
+	    The Iterable to iterate over.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        The final, accumulated value.
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        reduce, reduced, into
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> t = transducers;
+<span class="hljs-keyword">var</span> inc = <span class="hljs-keyword">function</span>(<span class="hljs-params">n</span>) { <span class="hljs-keyword">return</span> n+<span class="hljs-number">1</span>; };
+<span class="hljs-keyword">var</span> isEven = <span class="hljs-keyword">function</span>(<span class="hljs-params">n</span>) { <span class="hljs-keyword">return</span> n % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>; };
+<span class="hljs-keyword">var</span> apush = <span class="hljs-keyword">function</span>(<span class="hljs-params">arr,x</span>) { arr.<span class="hljs-title function_">push</span>(x); <span class="hljs-keyword">return</span> arr; };
+<span class="hljs-keyword">var</span> xf = <span class="hljs-title function_">compose</span>(<span class="hljs-title function_">map</span>(inc),<span class="hljs-title function_">filter</span>(isEven));
+<span class="hljs-title function_">transduce</span>(xf, apush, [], [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]); <span class="hljs-comment">// [2,4]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
