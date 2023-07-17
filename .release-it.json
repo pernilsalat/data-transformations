@@ -2,7 +2,7 @@
   "github": {
     "release": true,
     "autoGenerate": true,
-    "web": false
+    "web": true
   },
   "hooks": {
     "before:init": ["npm run format", "npm run lint", "npm test"],
