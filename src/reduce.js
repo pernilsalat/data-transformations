@@ -4,6 +4,9 @@ import { reducers } from '#utils/internal/reducers.js';
 import { toTransducer } from '#utils/internal/toTransducer.js';
 
 /**
+ * **[Curried function]**
+ *
+ *
  * Returns a single item by iterating through the collection, successively calling the iterator
  * function and passing it an accumulator value and the current value from the array, and
  * then passing the result to the next call.

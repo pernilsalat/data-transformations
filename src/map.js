@@ -2,6 +2,9 @@ import { get } from '#utils/internal/get.js';
 import { mapper } from '#utils/internal/mappers.js';
 
 /**
+ * **[Curried function]**
+ *
+ *
  * Returns a new Iterable, constructed by applying the supplied function to every element of the
  * supplied list.
  *

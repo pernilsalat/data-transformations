@@ -2,6 +2,9 @@ import { get } from '#utils/internal/get.js';
 import { takes } from '#utils/internal/takes.js';
 
 /**
+ * **[Curried function]**
+ *
+ *
  * Returns the first `n` elements of the iterable.
  *
  * @func

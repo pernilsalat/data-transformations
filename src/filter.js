@@ -2,6 +2,9 @@ import { filters } from '#utils/internal/filters.js';
 import { get } from '#utils/internal/get.js';
 
 /**
+ * **[Curried function]**
+ *
+ *
  * Returns a new list containing only those items that match a given predicate function.
  * The predicate function is passed: **(value, index, collection)**.
  * in the case of filtering and object, the predicate function is passed: **(value, key, collection)**.
