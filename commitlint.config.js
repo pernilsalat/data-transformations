@@ -1,4 +1,4 @@
 export default {
   extends: ['@commitlint/config-conventional'],
-  ignores: [(message) => message.startsWith('Release')],
+  ignores: [(message) => message.startsWith('WIP: ')],
 };
