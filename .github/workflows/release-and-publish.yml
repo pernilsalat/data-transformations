@@ -17,8 +17,8 @@
             NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         - name: Initialize Git user
           run: |
-            git config --global user.email "david@kodaps.com"
-            git config --global user.name "Release Workflow"
+            git config --global user.email "jazzel88@gmail.com"
+            git config --global user.name "pernilsalat"
         - name: Log git status
           run: git status
         - name: Run release
