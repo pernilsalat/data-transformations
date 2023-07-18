@@ -1,5 +1,8 @@
     name: Release & Publish to NPM
     on: workflow_dispatch
+    permissions:
+      contents: write
+
     jobs:
       release:
         runs-on: ubuntu-20.04
@@ -19,8 +22,7 @@
         - name: Log git status
           run: git status
         - name: Run release
-          run: echo ${{secrets.GITHUB_TOKEN }} | sed 's/./& /g'
-          #run: npm run release --ci
+          run: npm run release --ci
           env:
             NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
