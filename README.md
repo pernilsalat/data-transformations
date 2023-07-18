@@ -1,10 +1,28 @@
 # data-transformations
 
-## Description
+Description
+------------
 
 A practical functional library for data transformations in JavaScript.
 
 Take a look at the [interactive documentation](https://pernilsalat.github.io/data-transformations/)
+
+Installation
+------------
+
+To use with node:
+
+```bash
+$ npm install @hamlab/data-transformations
+```
+
+Then in the console:
+
+```javascript
+const DT = require('@hamlab/data-transformations');
+const { map } = require('@hamlab/data-transformations/map');
+...
+```
 
 ## Documentation
 
