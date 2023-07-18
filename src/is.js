@@ -61,6 +61,9 @@ const isPromise = _is(Promise);
 const isThenable = (x) => isFunction(x?.then);
 
 /**
+ * **[Curried function]**
+ *
+ *
  * See if an object (`val`) is an instance of the supplied constructor.
  * This function will check up the inheritance chain, if any.
  * * Additionally, it has the following methods for nicer and more semantic

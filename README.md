@@ -71,7 +71,9 @@ Take a look at the [interactive documentation](https://pernilsalat.github.io/dat
 
 ### bind
 
-[src/bind.js:20-26](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/bind.js#L20-L26 "Source code on GitHub")
+[src/bind.js:24-30](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/bind.js#L24-L30 "Source code on GitHub")
+
+**\[Curried function]**
 
 Creates a function that is bound to a context.
 Note: `bind` does not provide the additional argument-binding capabilities of
@@ -94,7 +96,7 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### complement
 
-[src/complement.js:24-26](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/complement.js#L24-L26 "Source code on GitHub")
+[src/complement.js:24-26](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/complement.js#L24-L26 "Source code on GitHub")
 
 Takes a function `f` and returns a function `g` such that:
 
@@ -122,7 +124,7 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### compose
 
-[src/compose.js:18-26](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/compose.js#L18-L26 "Source code on GitHub")
+[src/compose.js:18-26](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/compose.js#L18-L26 "Source code on GitHub")
 
 *   **See**: pipe
 
@@ -147,7 +149,7 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### composeAsync
 
-[src/composeAsync.js:25-43](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/composeAsync.js#L25-L43 "Source code on GitHub")
+[src/composeAsync.js:25-43](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/composeAsync.js#L25-L43 "Source code on GitHub")
 
 *   **See**: pipeAsync
 
@@ -175,7 +177,7 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### curry
 
-[src/curry.js:27-35](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/curry.js#L27-L35 "Source code on GitHub")
+[src/curry.js:27-35](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/curry.js#L27-L35 "Source code on GitHub")
 
 *   **See**: curryN
 
@@ -210,7 +212,7 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### curryN
 
-[src/curryN.js:31-39](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/curryN.js#L31-L39 "Source code on GitHub")
+[src/curryN.js:31-39](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/curryN.js#L31-L39 "Source code on GitHub")
 
 *   **See**: curry
 
@@ -246,9 +248,11 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### filter
 
-[src/filter.js:36-52](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/filter.js#L36-L52 "Source code on GitHub")
+[src/filter.js:39-55](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/filter.js#L39-L55 "Source code on GitHub")
 
 *   **See**: transduce
+
+**\[Curried function]**
 
 Returns a new list containing only those items that match a given predicate function.
 The predicate function is passed: **(value, index, collection)**.
@@ -284,7 +288,7 @@ Returns **([Collection](#collection) | [Function](https://developer.mozilla.org/
 
 ### Transducer
 
-[src/internal/typedef.js:1-17](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/internal/typedef.js#L1-L10 "Source code on GitHub")
+[src/internal/typedef.js:1-17](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/internal/typedef.js#L1-L10 "Source code on GitHub")
 
 see [The Transducer Protocol](https://github.com/cognitect-labs/transducers-js/tree/master#the-transducer-protocol)
 
@@ -298,13 +302,13 @@ Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 
 ### Collection
 
-[src/internal/typedef.js:1-17](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/internal/typedef.js#L12-L16 "Source code on GitHub")
+[src/internal/typedef.js:1-17](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/internal/typedef.js#L12-L16 "Source code on GitHub")
 
 Type: ([Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) | [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object) | [Transducer](#transducer) | [Set](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set) | [Map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map) | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | Iterator | GeneratorFunction | Generator | Iterable)
 
 ### Into
 
-[src/into.js:52-89](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/into.js#L4-L13 "Source code on GitHub")
+[src/into.js:54-91](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/into.js#L4-L13 "Source code on GitHub")
 
 Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
@@ -319,7 +323,7 @@ Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 
 ### into
 
-[src/into.js:52-89](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/into.js#L52-L89 "Source code on GitHub")
+[src/into.js:54-91](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/into.js#L54-L91 "Source code on GitHub")
 
 Transforms the items of the iterable with the transducer and appends the transformed items to
 the accumulator using an appropriate iterator function based on the accumulator type.
@@ -331,6 +335,8 @@ In the case the accumulator is a number (into.number), there is no merge strateg
 returns what the transducer returns
 
 The iteration is performed with reduce after initializing the transducer.
+
+All properties are **curried**.
 
 Type: [Into](#into)
 
@@ -359,7 +365,9 @@ into.object(
 
 ### is
 
-[src/is.js:139-174](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/is.js#L139-L174 "Source code on GitHub")
+[src/is.js:142-177](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/is.js#L142-L177 "Source code on GitHub")
+
+**\[Curried function]**
 
 See if an object (`val`) is an instance of the supplied constructor.
 This function will check up the inheritance chain, if any.
@@ -448,9 +456,11 @@ Returns **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### map
 
-[src/map.js:39-55](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/map.js#L39-L55 "Source code on GitHub")
+[src/map.js:42-58](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/map.js#L42-L58 "Source code on GitHub")
 
 *   **See**: transduce
+
+**\[Curried function]**
 
 Returns a new Iterable, constructed by applying the supplied function to every element of the
 supplied list.
@@ -489,7 +499,7 @@ Returns **([Collection](#collection) | [Function](https://developer.mozilla.org/
 
 ### pipe
 
-[src/pipe.js:20-28](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/pipe.js#L20-L28 "Source code on GitHub")
+[src/pipe.js:20-28](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/pipe.js#L20-L28 "Source code on GitHub")
 
 *   **See**: compose
 
@@ -514,7 +524,7 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### pipeAsync
 
-[src/pipeAsync.js:25-43](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/pipeAsync.js#L25-L43 "Source code on GitHub")
+[src/pipeAsync.js:25-43](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/pipeAsync.js#L25-L43 "Source code on GitHub")
 
 *   **See**: composeAsync
 
@@ -542,9 +552,11 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### reduce
 
-[src/reduce.js:42-54](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/reduce.js#L42-L54 "Source code on GitHub")
+[src/reduce.js:45-57](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/reduce.js#L45-L57 "Source code on GitHub")
 
 *   **See**: reduced
+
+**\[Curried function]**
 
 Returns a single item by iterating through the collection, successively calling the iterator
 function and passing it an accumulator value and the current value from the array, and
@@ -584,7 +596,7 @@ Returns **any** The final, accumulated value.
 
 ### reduced
 
-[src/reduced.js:22-25](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/reduced.js#L22-L25 "Source code on GitHub")
+[src/reduced.js:22-25](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/reduced.js#L22-L25 "Source code on GitHub")
 
 *   **See**: reduce, transduce
 
@@ -611,7 +623,9 @@ Returns **any** The wrapped value.
 
 ### take
 
-[src/take.js:41-58](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/take.js#L41-L58 "Source code on GitHub")
+[src/take.js:44-61](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/take.js#L44-L61 "Source code on GitHub")
+
+**\[Curried function]**
 
 Returns the first `n` elements of the iterable.
 
@@ -653,7 +667,9 @@ Returns **any**&#x20;
 
 ### tap
 
-[src/tap.js:22-32](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/tap.js#L22-L32 "Source code on GitHub")
+[src/tap.js:25-35](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/tap.js#L25-L35 "Source code on GitHub")
+
+**\[Curried function]**
 
 Runs the given function with the supplied object, then returns the object.
 
@@ -676,9 +692,11 @@ Returns **any** `x`.
 
 ### transduce
 
-[src/transduce.js:49-66](https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/transduce.js#L49-L66 "Source code on GitHub")
+[src/transduce.js:52-69](https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/transduce.js#L52-L69 "Source code on GitHub")
 
 *   **See**: reduce, reduced, into
+
+**\[Curried function]**
 
 Initializes a transducer using supplied iterator function. Returns a single item by
 iterating through the list, successively calling the transformed iterator function and

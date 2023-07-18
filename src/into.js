@@ -25,6 +25,8 @@ import { transduce } from '#utils/transduce.js';
  *
  * The iteration is performed with reduce after initializing the transducer.
  *
+ * All properties are **curried**.
+ *
  * @type {Into}
  * @category Transformation
  * @example

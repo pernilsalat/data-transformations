@@ -4,6 +4,9 @@ import { is } from '#utils/is.js';
 import { reduce } from '#utils/reduce.js';
 
 /**
+ * **[Curried function]**
+ *
+ *
  * Initializes a transducer using supplied iterator function. Returns a single item by
  * iterating through the list, successively calling the transformed iterator function and
  * passing it an accumulator value and the current value from the array, and then passing

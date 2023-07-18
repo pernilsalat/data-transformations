@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>@hamlab/data-transformations 1.0.13 | Documentation</title>
+  <title>@hamlab/data-transformations 1.0.7 | Documentation</title>
   <meta name='description' content='A practical functional library for data transformations in JavaScript.'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>@hamlab/data-transformations</h3>
-          <div class='mb1'><code>1.0.13</code></div>
+          <div class='mb1'><code>1.0.7</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -247,14 +247,15 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/bind.js#L20-L26'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/bind.js#L24-L30'>
       <span>src/bind.js</span>
       </a>
     
   </div>
   
 
-  <p>Creates a function that is bound to a context.
+  <p><strong>[Curried function]</strong></p>
+<p>Creates a function that is bound to a context.
 Note: <code>bind</code> does not provide the additional argument-binding capabilities of
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind</a>.</p>
 
@@ -346,7 +347,7 @@ Note: <code>bind</code> does not provide the additional argument-binding capabil
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/complement.js#L24-L26'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/complement.js#L24-L26'>
       <span>src/complement.js</span>
       </a>
     
@@ -440,7 +441,7 @@ the same arguments to <code>f</code> gives a logical <strong>true</strong> value
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/compose.js#L18-L26'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/compose.js#L18-L26'>
       <span>src/compose.js</span>
       </a>
     
@@ -534,7 +535,7 @@ any arity; the remaining functions must be unary.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/composeAsync.js#L25-L43'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/composeAsync.js#L25-L43'>
       <span>src/composeAsync.js</span>
       </a>
     
@@ -631,7 +632,7 @@ promise, it chains remaining ones</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/curry.js#L27-L35'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/curry.js#L27-L35'>
       <span>src/curry.js</span>
       </a>
     
@@ -745,7 +746,7 @@ be provided one at a time. If <code>f</code> is a ternary function and <code>g</
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/curryN.js#L31-L39'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/curryN.js#L31-L39'>
       <span>src/curryN.js</span>
       </a>
     
@@ -868,14 +869,15 @@ First, its arguments needn't be provided one at a time. If <code>g</code> is
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/filter.js#L36-L52'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/filter.js#L39-L55'>
       <span>src/filter.js</span>
       </a>
     
   </div>
   
 
-  <p>Returns a new list containing only those items that match a given predicate function.
+  <p><strong>[Curried function]</strong></p>
+<p>Returns a new list containing only those items that match a given predicate function.
 The predicate function is passed: <strong>(value, index, collection)</strong>.
 in the case of filtering and object, the predicate function is passed: <strong>(value, key, collection)</strong>.</p>
 <p>Note that <code>filter</code> does not skip deleted or unassigned indices, unlike the native
@@ -982,7 +984,7 @@ in the case of filtering and object, the predicate function is passed: <strong>(
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/internal/typedef.js#L1-L10'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/internal/typedef.js#L1-L10'>
       <span>src/internal/typedef.js</span>
       </a>
     
@@ -1070,7 +1072,7 @@ in the case of filtering and object, the predicate function is passed: <strong>(
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/internal/typedef.js#L12-L16'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/internal/typedef.js#L12-L16'>
       <span>src/internal/typedef.js</span>
       </a>
     
@@ -1128,7 +1130,7 @@ in the case of filtering and object, the predicate function is passed: <strong>(
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/into.js#L4-L13'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/into.js#L4-L13'>
       <span>src/into.js</span>
       </a>
     
@@ -1233,7 +1235,7 @@ in the case of filtering and object, the predicate function is passed: <strong>(
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/into.js#L52-L89'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/into.js#L54-L91'>
       <span>src/into.js</span>
       </a>
     
@@ -1247,6 +1249,7 @@ parameter is a pair [key, value] when the accumulator is an Object or a Map.</p>
 <p>In the case the accumulator is a number (into.number), there is no merge strategy and just
 returns what the transducer returns</p>
 <p>The iteration is performed with reduce after initializing the transducer.</p>
+<p>All properties are <strong>curried</strong>.</p>
 
     <div class='pre p1 fill-light mt0'>into</div>
   
@@ -1321,14 +1324,15 @@ into.<span class="hljs-title function_">object</span>(
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/is.js#L139-L174'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/is.js#L142-L177'>
       <span>src/is.js</span>
       </a>
     
   </div>
   
 
-  <p>See if an object (<code>val</code>) is an instance of the supplied constructor.
+  <p><strong>[Curried function]</strong></p>
+<p>See if an object (<code>val</code>) is an instance of the supplied constructor.
 This function will check up the inheritance chain, if any.</p>
 <ul>
 <li>Additionally, it has the following methods for nicer and more semantic
@@ -1653,14 +1657,15 @@ is.<span class="hljs-property">not</span>.<span class="hljs-keyword">function</s
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/map.js#L39-L55'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/map.js#L42-L58'>
       <span>src/map.js</span>
       </a>
     
   </div>
   
 
-  <p>Returns a new Iterable, constructed by applying the supplied function to every element of the
+  <p><strong>[Curried function]</strong></p>
+<p>Returns a new Iterable, constructed by applying the supplied function to every element of the
 supplied list.</p>
 <p>When mapping an object, the function mapper accepts <strong>(value, key, object)</strong>
 In any other case, the mapper function accepts <strong>(value, index, collection)</strong>. The value comes from
@@ -1771,7 +1776,7 @@ native <code>Array.prototype.map</code> method. For more details on this behavio
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/pipe.js#L20-L28'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/pipe.js#L20-L28'>
       <span>src/pipe.js</span>
       </a>
     
@@ -1864,7 +1869,7 @@ any arity; the remaining functions must be unary.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/pipeAsync.js#L25-L43'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/pipeAsync.js#L25-L43'>
       <span>src/pipeAsync.js</span>
       </a>
     
@@ -1961,14 +1966,15 @@ promise, it chains remaining ones</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/reduce.js#L42-L54'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/reduce.js#L45-L57'>
       <span>src/reduce.js</span>
       </a>
     
   </div>
   
 
-  <p>Returns a single item by iterating through the collection, successively calling the iterator
+  <p><strong>[Curried function]</strong></p>
+<p>Returns a single item by iterating through the collection, successively calling the iterator
 function and passing it an accumulator value and the current value from the array, and
 then passing the result to the next call.</p>
 <p>The iterator function receives: <strong>(acc, value, index, collection)</strong>. while reducing an object
@@ -2086,7 +2092,7 @@ current element from the Iterable, the iteration index and the whole Iterable. I
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/reduced.js#L22-L25'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/reduced.js#L22-L25'>
       <span>src/reduced.js</span>
       </a>
     
@@ -2183,14 +2189,15 @@ guaranteed to be stable.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/take.js#L41-L58'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/take.js#L44-L61'>
       <span>src/take.js</span>
       </a>
     
   </div>
   
 
-  <p>Returns the first <code>n</code> elements of the iterable.</p>
+  <p><strong>[Curried function]</strong></p>
+<p>Returns the first <code>n</code> elements of the iterable.</p>
 
     <div class='pre p1 fill-light mt0'>take(n: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, collection: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | Iterator | GeneratorFunction | Generator)): any</div>
   
@@ -2294,14 +2301,15 @@ guaranteed to be stable.</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/tap.js#L22-L32'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/tap.js#L25-L35'>
       <span>src/tap.js</span>
       </a>
     
   </div>
   
 
-  <p>Runs the given function with the supplied object, then returns the object.</p>
+  <p><strong>[Curried function]</strong></p>
+<p>Runs the given function with the supplied object, then returns the object.</p>
 <p>Acts as a transducer if a transformer is given as second parameter.</p>
 
     <div class='pre p1 fill-light mt0'>tap(fn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, x: any): any</div>
@@ -2392,14 +2400,15 @@ R.<span class="hljs-title function_">tap</span>(sayX, <span class="hljs-number">
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/06923084cd6fc4fb05ee5f0931db8b76d340a6d5/src/transduce.js#L49-L66'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/pernilsalat/data-transformations/blob/774a3f1ba77dfd6b196f317b0e8fe649f221bf81/src/transduce.js#L52-L69'>
       <span>src/transduce.js</span>
       </a>
     
   </div>
   
 
-  <p>Initializes a transducer using supplied iterator function. Returns a single item by
+  <p><strong>[Curried function]</strong></p>
+<p>Initializes a transducer using supplied iterator function. Returns a single item by
 iterating through the list, successively calling the transformed iterator function and
 passing it an accumulator value and the current value from the array, and then passing
 the result to the next call.</p>
