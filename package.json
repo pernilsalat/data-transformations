@@ -5,7 +5,6 @@
   "version": "1.0.19",
   "type": "module",
   "license": "MIT",
-  "private": true,
   "main": "./dist/data-transformations.cjs",
   "module": "./dist/data-transformations.js",
   "files": [
