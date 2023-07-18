@@ -1,5 +1,8 @@
 import { b as xtap } from "./transducers-2bb5eb4f.js";
 /**
+ * **[Curried function]**
+ *
+ *
  * Runs the given function with the supplied object, then returns the object.
  *
  * Acts as a transducer if a transformer is given as second parameter.

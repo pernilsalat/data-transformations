@@ -31,6 +31,9 @@ const isTransducer = (x) => isFunction(x == null ? void 0 : x["@@transducer/step
 const isPromise = _is(Promise);
 const isThenable = (x) => isFunction(x == null ? void 0 : x.then);
 /**
+ * **[Curried function]**
+ *
+ *
  * See if an object (`val`) is an instance of the supplied constructor.
  * This function will check up the inheritance chain, if any.
  * * Additionally, it has the following methods for nicer and more semantic

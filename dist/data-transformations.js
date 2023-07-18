@@ -10,7 +10,7 @@ import { is } from "./is.js";
 import { map } from "./map.js";
 import { pipe } from "./pipe.js";
 import { pipeAsync } from "./pipeAsync.js";
-import { r as reduce } from "./reduce-5ebbedcd.js";
+import { r as reduce } from "./reduce-86de5073.js";
 import { reduced } from "./reduced.js";
 import { take } from "./take.js";
 import { tap } from "./tap.js";

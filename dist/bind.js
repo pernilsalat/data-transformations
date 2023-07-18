@@ -1,8 +1,12 @@
 import { curryN } from "./curryN.js";
 /**
+ * **[Curried function]**
+ *
+ *
  * Creates a function that is bound to a context.
  * Note: `bind` does not provide the additional argument-binding capabilities of
  * [Function.prototype.bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind).
+ *
  * @func
  * @category Function
  * @category Object

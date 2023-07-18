@@ -64,6 +64,9 @@ const mapper = {
   "[object Generator]": (fn, m) => mapIterator(fn, m, m)
 };
 /**
+ * **[Curried function]**
+ *
+ *
  * Returns a new Iterable, constructed by applying the supplied function to every element of the
  * supplied list.
  *

@@ -49,6 +49,9 @@ const takes = {
   "[object Generator]": (n, m) => iteratorTake(n, m, m)
 };
 /**
+ * **[Curried function]**
+ *
+ *
  * Returns the first `n` elements of the iterable.
  *
  * @func

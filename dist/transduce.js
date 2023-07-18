@@ -1,10 +1,13 @@
 import { curryN } from "./curryN.js";
-import { r as reduce, t as toTransducer } from "./reduce-5ebbedcd.js";
+import { r as reduce, t as toTransducer } from "./reduce-86de5073.js";
 import { is } from "./is.js";
 import "./curry.js";
 import "./get-3e246b66.js";
 import "./complement.js";
 /**
+ * **[Curried function]**
+ *
+ *
  * Initializes a transducer using supplied iterator function. Returns a single item by
  * iterating through the list, successively calling the transformed iterator function and
  * passing it an accumulator value and the current value from the array, and then passing

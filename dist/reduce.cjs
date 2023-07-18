@@ -2,7 +2,7 @@
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 require("./curry.cjs");
 require("./get-6c5350df.cjs");
-const reduce = require("./reduce-77e58b7e.cjs");
+const reduce = require("./reduce-ff3d25ca.cjs");
 require("./is.cjs");
 require("./complement.cjs");
 exports.reduce = reduce.reduce;

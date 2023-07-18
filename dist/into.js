@@ -1,6 +1,6 @@
 import { transduce } from "./transduce.js";
 import "./curryN.js";
-import "./reduce-5ebbedcd.js";
+import "./reduce-86de5073.js";
 import "./curry.js";
 import "./get-3e246b66.js";
 import "./is.js";
@@ -38,6 +38,8 @@ const combine = {
  * returns what the transducer returns
  *
  * The iteration is performed with reduce after initializing the transducer.
+ *
+ * All properties are **curried**.
  *
  * @type {Into}
  * @category Transformation

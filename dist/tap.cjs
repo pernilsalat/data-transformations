@@ -2,6 +2,9 @@
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const transducers = require("./transducers-27c304a0.cjs");
 /**
+ * **[Curried function]**
+ *
+ *
  * Runs the given function with the supplied object, then returns the object.
  *
  * Acts as a transducer if a transformer is given as second parameter.

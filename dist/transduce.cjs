@@ -1,12 +1,15 @@
 "use strict";
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const curryN = require("./curryN.cjs");
-const reduce = require("./reduce-77e58b7e.cjs");
+const reduce = require("./reduce-ff3d25ca.cjs");
 const is = require("./is.cjs");
 require("./curry.cjs");
 require("./get-6c5350df.cjs");
 require("./complement.cjs");
 /**
+ * **[Curried function]**
+ *
+ *
  * Initializes a transducer using supplied iterator function. Returns a single item by
  * iterating through the list, successively calling the transformed iterator function and
  * passing it an accumulator value and the current value from the array, and then passing

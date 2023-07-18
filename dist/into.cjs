@@ -2,7 +2,7 @@
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const transduce = require("./transduce.cjs");
 require("./curryN.cjs");
-require("./reduce-77e58b7e.cjs");
+require("./reduce-ff3d25ca.cjs");
 require("./curry.cjs");
 require("./get-6c5350df.cjs");
 require("./is.cjs");
@@ -40,6 +40,8 @@ const combine = {
  * returns what the transducer returns
  *
  * The iteration is performed with reduce after initializing the transducer.
+ *
+ * All properties are **curried**.
  *
  * @type {Into}
  * @category Transformation
