@@ -1,4 +1,8 @@
 {
+  "git": {
+    "commitMessage": "chore: release v${version}",
+    "requireBranch": "main"
+  },
   "github": {
     "autoGenerate": true,
     "commitMessage": "chore: release v${version}",
