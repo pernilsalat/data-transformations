@@ -1,16 +1,18 @@
 {
   "github": {
-    "release": true,
     "autoGenerate": true,
+    "commitMessage": "chore: release v${version}",
+    "release": true,
+    "requireBranch": "main",
     "web": true
   },
+  "npm": {
+    "publish": true
+  },
   "hooks": {
-    "before:init": ["npm run format", "npm run lint", "npm test"],
+    "before:init": ["git pull", "npm run format", "npm run lint", "npm test"],
     "after:my-plugin:bump": "./bin/my-script.sh",
-    "after:bump": [
-      "npm run docs:build",
-      "npm run build"
-    ],
+    "after:bump": ["npm run docs:build", "npm run build", "npx auto-changelog -p"],
     "after:git:release": "echo After git push, before github release",
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   }
