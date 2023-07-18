@@ -8,6 +8,7 @@
     "commitMessage": "chore: release v${version}",
     "release": true,
     "requireBranch": "main",
+    "tokenRef": "GITHUB_TOKEN",
     "web": true
   },
   "npm": {
