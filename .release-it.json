@@ -4,12 +4,10 @@
     "requireBranch": "main"
   },
   "github": {
-    "autoGenerate": true,
     "commitMessage": "chore: release v${version}",
     "release": true,
     "requireBranch": "main",
-    "tokenRef": "GITHUB_TOKEN",
-    "web": true
+    "tokenRef": "GITHUB_TOKEN"
   },
   "npm": {
     "publish": true
