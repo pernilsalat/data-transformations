@@ -71,7 +71,7 @@ A practical functional library for data transformations in JavaScript.
 
 ### bind
 
-[src/bind.js:20-26](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/bind.js#L20-L26 "Source code on GitHub")
+[src/bind.js:20-26](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/bind.js#L20-L26 "Source code on GitHub")
 
 Creates a function that is bound to a context.
 Note: `bind` does not provide the additional argument-binding capabilities of
@@ -94,7 +94,7 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### complement
 
-[src/complement.js:24-26](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/complement.js#L24-L26 "Source code on GitHub")
+[src/complement.js:24-26](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/complement.js#L24-L26 "Source code on GitHub")
 
 Takes a function `f` and returns a function `g` such that:
 
@@ -122,7 +122,7 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### compose
 
-[src/compose.js:18-26](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/compose.js#L18-L26 "Source code on GitHub")
+[src/compose.js:18-26](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/compose.js#L18-L26 "Source code on GitHub")
 
 *   **See**: pipe
 
@@ -147,7 +147,7 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### composeAsync
 
-[src/composeAsync.js:25-43](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/composeAsync.js#L25-L43 "Source code on GitHub")
+[src/composeAsync.js:25-43](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/composeAsync.js#L25-L43 "Source code on GitHub")
 
 *   **See**: pipeAsync
 
@@ -175,7 +175,7 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### curry
 
-[src/curry.js:27-35](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/curry.js#L27-L35 "Source code on GitHub")
+[src/curry.js:27-35](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/curry.js#L27-L35 "Source code on GitHub")
 
 *   **See**: curryN
 
@@ -210,7 +210,7 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### curryN
 
-[src/curryN.js:31-39](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/curryN.js#L31-L39 "Source code on GitHub")
+[src/curryN.js:31-39](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/curryN.js#L31-L39 "Source code on GitHub")
 
 *   **See**: curry
 
@@ -246,7 +246,7 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### filter
 
-[src/filter.js:36-52](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/filter.js#L36-L52 "Source code on GitHub")
+[src/filter.js:36-52](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/filter.js#L36-L52 "Source code on GitHub")
 
 *   **See**: transduce
 
@@ -284,7 +284,7 @@ Returns **([Collection](#collection) | [Function](https://developer.mozilla.org/
 
 ### Transducer
 
-[src/internal/typedef.js:1-17](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/internal/typedef.js#L1-L10 "Source code on GitHub")
+[src/internal/typedef.js:1-17](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/internal/typedef.js#L1-L10 "Source code on GitHub")
 
 see [The Transducer Protocol](https://github.com/cognitect-labs/transducers-js/tree/master#the-transducer-protocol)
 
@@ -298,13 +298,13 @@ Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 
 ### Collection
 
-[src/internal/typedef.js:1-17](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/internal/typedef.js#L12-L16 "Source code on GitHub")
+[src/internal/typedef.js:1-17](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/internal/typedef.js#L12-L16 "Source code on GitHub")
 
 Type: ([Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) | [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object) | [Transducer](#transducer) | [Set](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set) | [Map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map) | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | Iterator | GeneratorFunction | Generator | Iterable)
 
 ### Into
 
-[src/into.js:52-89](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/into.js#L4-L13 "Source code on GitHub")
+[src/into.js:52-89](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/into.js#L4-L13 "Source code on GitHub")
 
 Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
@@ -319,7 +319,7 @@ Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 
 ### into
 
-[src/into.js:52-89](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/into.js#L52-L89 "Source code on GitHub")
+[src/into.js:52-89](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/into.js#L52-L89 "Source code on GitHub")
 
 Transforms the items of the iterable with the transducer and appends the transformed items to
 the accumulator using an appropriate iterator function based on the accumulator type.
@@ -359,7 +359,7 @@ into.object(
 
 ### is
 
-[src/is.js:139-174](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/is.js#L139-L174 "Source code on GitHub")
+[src/is.js:139-174](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/is.js#L139-L174 "Source code on GitHub")
 
 See if an object (`val`) is an instance of the supplied constructor.
 This function will check up the inheritance chain, if any.
@@ -448,7 +448,7 @@ Returns **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### map
 
-[src/map.js:39-55](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/map.js#L39-L55 "Source code on GitHub")
+[src/map.js:39-55](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/map.js#L39-L55 "Source code on GitHub")
 
 *   **See**: transduce
 
@@ -489,7 +489,7 @@ Returns **([Collection](#collection) | [Function](https://developer.mozilla.org/
 
 ### pipe
 
-[src/pipe.js:20-28](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/pipe.js#L20-L28 "Source code on GitHub")
+[src/pipe.js:20-28](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/pipe.js#L20-L28 "Source code on GitHub")
 
 *   **See**: compose
 
@@ -514,7 +514,7 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### pipeAsync
 
-[src/pipeAsync.js:25-43](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/pipeAsync.js#L25-L43 "Source code on GitHub")
+[src/pipeAsync.js:25-43](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/pipeAsync.js#L25-L43 "Source code on GitHub")
 
 *   **See**: composeAsync
 
@@ -542,7 +542,7 @@ Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### reduce
 
-[src/reduce.js:42-54](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/reduce.js#L42-L54 "Source code on GitHub")
+[src/reduce.js:42-54](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/reduce.js#L42-L54 "Source code on GitHub")
 
 *   **See**: reduced
 
@@ -584,7 +584,7 @@ Returns **any** The final, accumulated value.
 
 ### reduced
 
-[src/reduced.js:22-25](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/reduced.js#L22-L25 "Source code on GitHub")
+[src/reduced.js:22-25](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/reduced.js#L22-L25 "Source code on GitHub")
 
 *   **See**: reduce, transduce
 
@@ -611,7 +611,7 @@ Returns **any** The wrapped value.
 
 ### take
 
-[src/take.js:41-58](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/take.js#L41-L58 "Source code on GitHub")
+[src/take.js:41-58](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/take.js#L41-L58 "Source code on GitHub")
 
 Returns the first `n` elements of the iterable.
 
@@ -653,7 +653,7 @@ Returns **any**&#x20;
 
 ### tap
 
-[src/tap.js:22-32](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/tap.js#L22-L32 "Source code on GitHub")
+[src/tap.js:22-32](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/tap.js#L22-L32 "Source code on GitHub")
 
 Runs the given function with the supplied object, then returns the object.
 
@@ -676,7 +676,7 @@ Returns **any** `x`.
 
 ### transduce
 
-[src/transduce.js:49-66](https://github.com/pernilsalat/data-transformations/blob/371b26b82a8687972b2c309eb1bdfdcb356da728/src/transduce.js#L49-L66 "Source code on GitHub")
+[src/transduce.js:49-66](https://github.com/pernilsalat/data-transformations/blob/df6770883ee1e0582f4bfccb1468cd81df41cf71/src/transduce.js#L49-L66 "Source code on GitHub")
 
 *   **See**: reduce, reduced, into
 
