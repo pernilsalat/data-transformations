@@ -26,7 +26,7 @@ require("./complement.cjs");
  * A transformer is an object that provides a 2-arity reducing iterator function, step,
  * 0-arity initial value function, init, and 1-arity result extraction function, result.
  * The step function is used as the iterator function in reduce. The result function is used
- * to convert the final accumulator into the return type and in most cases is R.identity.
+ * to convert the final accumulator into the return type and in most cases is the **identity** function.
  * The init function can be used to provide an initial accumulator, but is ignored by transduce.
  *
  * The iteration is performed with reduce after initializing the transducer.

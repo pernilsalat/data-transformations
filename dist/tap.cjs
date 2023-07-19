@@ -18,7 +18,7 @@ const transducers = require("./transducers-27c304a0.cjs");
  * @example
  *
  * const sayX = x => console.log('x is ' + x);
- * R.tap(sayX, 100); //=> 100
+ * tap(sayX, 100); //=> 100
  * // logs 'x is 100'
  *
  * @preserve true
