@@ -34,7 +34,7 @@
     "format": "prettier --write src benchmark test",
     "benchmark": "node ./benchmark",
     "prepare": "husky install",
-    "release": "release-it"
+    "release": "dotenv release-it --"
   },
   "husky": {
     "hooks": {
@@ -57,6 +57,7 @@
     "babel-preset-jest": "^26.6.2",
     "benchmark": "^2.1.4",
     "documentation": "^14.0.2",
+    "dotenv-cli": "^7.2.1",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.3",
