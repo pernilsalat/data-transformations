@@ -6,8 +6,7 @@
   "github": {
     "commitMessage": "chore: release v${version}",
     "release": true,
-    "requireBranch": "main",
-    "tokenRef": "GITHUB_TOKEN"
+    "requireBranch": "main"
   },
   "npm": {
     "publish": true
