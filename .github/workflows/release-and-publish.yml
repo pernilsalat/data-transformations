@@ -22,7 +22,7 @@
         - name: Log git status
           run: git status
         - name: Run release
-          run: npm run release --ci
+          run: npm run release --ci -VV
           env:
             NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
