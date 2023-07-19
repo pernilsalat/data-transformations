@@ -2,7 +2,7 @@
   "name": "@hamlab/data-transformations",
   "author": "Kirian Olle Oliver <jazzel88@gmail.com>",
   "description": "A practical functional library for data transformations in JavaScript.",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "type": "module",
   "license": "MIT",
   "main": "./dist/data-transformations.cjs",
